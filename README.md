@@ -31,6 +31,6 @@ Reports are reviewed and may be marked as needing information, confirmed, planne
 ## Links
 
 - Product: https://hiveminded.ai
-- Company: https://saasysolutionsllc.com
+- Owner: Hive Minded AI LLC
 
 Thank you for helping make HiveMinded.ai better.
