@@ -1,6 +1,6 @@
 name: Accessibility issue
 description: Report a barrier affecting access or assistive technology
- title: "[Accessibility]: "
+title: "[Accessibility]: "
 labels:
   - accessibility
   - needs-triage
