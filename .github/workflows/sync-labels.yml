@@ -1,0 +1,42 @@
+name: Sync repository labels
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/sync-labels.yml
+
+permissions:
+  issues: write
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or update labels
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = [
+              ['bug','d73a4a','Something is not working as expected'],
+              ['qa-finding','fbca04','Finding discovered during QA or testing'],
+              ['accessibility','7057ff','Accessibility barrier or WCAG-related issue'],
+              ['feature-request','a2eeef','New feature or product improvement'],
+              ['needs-triage','ededed','Awaiting initial review'],
+              ['needs-information','d876e3','More information is required'],
+              ['confirmed','0e8a16','Issue has been reproduced or validated'],
+              ['accepted','1d76db','Accepted into the product backlog'],
+              ['planned','0052cc','Planned for a future release'],
+              ['in-progress','5319e7','Work is currently underway'],
+              ['released','0e8a16','Available in a released version'],
+              ['priority-critical','b60205','Critical impact requiring immediate attention'],
+              ['priority-high','d93f0b','High-priority issue'],
+              ['priority-medium','fbca04','Medium-priority issue'],
+              ['priority-low','c2e0c6','Low-priority issue'],
+              ['duplicate','cfd3d7','Already reported elsewhere'],
+              ['cannot-reproduce','fef2c0','Unable to reproduce with available information'],
+              ['working-as-designed','bfdadc','Behavior is currently intentional'],
+              ['not-planned','ffffff','Not currently planned'],
+              ['documentation','0075ca','Documentation-related feedback'],
+              ['security','b60205','Security-related report; do not post vulnerability details publicly'],
+              ['ui-ux','d4c5
