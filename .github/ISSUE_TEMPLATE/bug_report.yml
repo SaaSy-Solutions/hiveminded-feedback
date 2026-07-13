@@ -1,0 +1,103 @@
+name: Bug report
+description: Report a reproducible problem in HiveMinded.ai
+title: "[Bug]: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem. This repository is public. Remove all sensitive, customer, tenant, account, credential, and proprietary data before submitting.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I removed all sensitive or private information from this report and its attachments.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
+  - type: input
+    id: area
+    attributes:
+      label: Product area
+      description: Which page, feature, or workflow is affected?
+      placeholder: Example: Workspace onboarding, agent builder, authentication
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Problem summary
+      description: Clearly describe what is wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Provide numbered, repeatable steps.
+      placeholder: |
+        1. Go to ...
+        2. Select ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Every time
+        - Frequently
+        - Intermittently
+        - Happened once
+        - Unknown
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: Choose the closest user impact. Maintainers may adjust this during triage.
+      options:
+        - Blocking - cannot continue or complete a critical workflow
+        - High - major feature unavailable or data appears incorrect
+        - Medium - workaround exists or impact is limited
+        - Low - cosmetic or minor inconvenience
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, browser version, operating system, and device.
+      placeholder: Chrome 128, Windows 11, desktop
+    validations:
+      required: true
+  - type: input
+    id: app_version
+    attributes:
+      label: App version or build
+      description: Include this only if it is displayed in the product.
+      placeholder: Optional
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots, recordings, logs, or additional context
+      description: Remove sensitive information before attaching anything. Paste only sanitized logs.

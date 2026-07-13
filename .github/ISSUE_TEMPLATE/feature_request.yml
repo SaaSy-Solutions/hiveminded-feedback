@@ -1,0 +1,59 @@
+name: Feature request
+description: Suggest an improvement or new capability for HiveMinded.ai
+title: "[Feature]: "
+labels:
+  - feature-request
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the problem and desired outcome rather than prescribing only one implementation. Do not include confidential business plans, customer data, or other sensitive information.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing requests and did not find a duplicate.
+          required: true
+        - label: This request contains no sensitive or private information.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What user problem would this solve, and who experiences it?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What should users be able to accomplish?
+    validations:
+      required: true
+  - type: textarea
+    id: current_workaround
+    attributes:
+      label: Current workaround
+      description: How do you handle this today?
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested approach
+      description: Optional. Share an implementation idea without assuming it is the only solution.
+  - type: dropdown
+    id: importance
+    attributes:
+      label: Importance to your workflow
+      options:
+        - Blocking adoption or continued use
+        - High value
+        - Helpful improvement
+        - Nice to have
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context or examples

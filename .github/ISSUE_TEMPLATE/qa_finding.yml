@@ -1,0 +1,90 @@
+name: QA finding
+description: Document a test scenario that produced an unexpected result
+title: "[QA]: "
+labels:
+  - qa-finding
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for structured QA findings. This repository is public; never include credentials, customer data, tenant information, or proprietary material.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched for an existing issue covering this finding.
+          required: true
+        - label: I removed all sensitive information.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
+  - type: input
+    id: scenario
+    attributes:
+      label: Test scenario
+      placeholder: Example: Create a workspace and invite a second user
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Test environment
+      placeholder: Production, staging, browser/OS/device
+    validations:
+      required: true
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Preconditions and test data
+      description: Describe prerequisites using only fictional or sanitized test data.
+  - type: textarea
+    id: steps
+    attributes:
+      label: Test steps
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: dropdown
+    id: repeatability
+    attributes:
+      label: Repeatability
+      options:
+        - 100% reproducible
+        - Intermittent
+        - Unable to reproduce again
+        - Not retested
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Suggested severity
+      options:
+        - Critical - severe service, security, or data integrity impact
+        - High - critical workflow blocked
+        - Medium - significant defect with a workaround
+        - Low - minor, visual, or edge-case issue
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence and notes
+      description: Attach screenshots, recordings, or sanitized logs when useful.

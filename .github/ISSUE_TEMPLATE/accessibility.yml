@@ -1,0 +1,61 @@
+name: Accessibility issue
+description: Report a barrier affecting access or assistive technology
+ title: "[Accessibility]: "
+labels:
+  - accessibility
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve accessibility. Do not include personal, medical, customer, or account-specific information.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing accessibility issues for a duplicate.
+          required: true
+        - label: I removed sensitive information from this report.
+          required: true
+  - type: input
+    id: location
+    attributes:
+      label: Page, component, or workflow
+      placeholder: Example: Sign-in modal, navigation menu, agent configuration form
+    validations:
+      required: true
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Accessibility barrier
+      description: Describe what is difficult or impossible to perceive, understand, navigate, or operate.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected accessible behavior
+    validations:
+      required: true
+  - type: input
+    id: assistive_technology
+    attributes:
+      label: Assistive technology
+      placeholder: Example: NVDA 2026.1, VoiceOver, keyboard only, 200% zoom
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, operating system, and device
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Additional context or sanitized evidence

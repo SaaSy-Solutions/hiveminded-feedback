@@ -6,12 +6,12 @@ Use this repository to report reproducible bugs, QA findings, accessibility prob
 
 ## Submit feedback
 
+Open the **Issues** tab and choose the form that best fits your feedback:
+
 - **Bug report:** Something is not working as expected.
 - **QA finding:** A test scenario produced an incorrect or inconsistent result.
 - **Accessibility issue:** A feature is difficult or impossible to use with assistive technology.
 - **Feature request:** Suggest a new capability or improvement.
-
-Open the **Issues** tab and choose the form that best fits your feedback.
 
 ## Before submitting
 
